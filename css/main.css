@@ -1,0 +1,63 @@
+#visualization {
+width:100%;
+background-color:white;
+border: 1px solid black;
+}
+#global {
+display:inline-block;
+width:100%;
+}
+
+label#find {
+color: black;
+}
+
+.ui-content {
+background-color: white;
+}
+
+svg{
+width: 100%;
+height: 100%;
+}
+
+#options{
+width: 100%;
+}
+
+
+#details{
+display:none;
+position:absolute;
+overflow:auto;
+right:30px;
+top:170px;
+bottom:75px;
+width: 450px;
+border:2px solid black;
+color: black;
+background-color:whitesmoke;
+text-shadow: none;
+}
+
+table {
+    width: 100%;
+    font-size:.8em;
+    }
+th, td {
+    padding: 5px 5px 5px 5px;
+    }
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    border-bottom: 2px solid #111111;
+    border-top: 1px solid #999;
+    text-align: left;
+    }
+tr.even {
+    background-color: #efefef;
+    }
+tr:hover {
+    background-color: #64A2CF;
+    }

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Document Header -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LiquidDC</title>
+
+<!-- link to CSS style sheets -->
+<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/main.css" rel="stylesheet" type="text/css"/>
+
+<!-- Metadata session -->
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+</head> <!-- End of Document Header -->
+
+
+<body>
+
+<!-- Main Page -->
+<div data-role="page" data-theme="a" id="main">	
+<!-- Page Header -->
+	<div data-role="header">
+		<h1>LiquidDC ver 1.0</h1>         
+		<a href="#login" id="Menu" data-role="button" data-iconpos="notext" data-icon="arrow-l"></a>		
+		
+		<form>
+ 	       <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+     	    <input type="radio" name="layout" id="network" value="on" checked="checked">
+        	<label for="network">Network Layout</label>
+   	    	<input type="radio" name="layout" id="catalog" value="off">
+    	    <label for="catalog">Catalog Layout</label>
+    	   </fieldset>
+		</form>
+
+</div><!-- End of Page Header -->
+
+<!-- Content which includes Output and Visualization panes -->
+<!-- Visualization is where the graph will take form -->
+<!-- Here we also show other controls to enable/disable relations between objects -->
+	<div data-role="content">	
+		<div id="global">
+			<div id="options" class="ui-grid-d">
+			<div class="ui-block-a">
+			<label for="vm2net"><img src="./img/vm2net.png" width="80" height="25"></label>
+			<select name="vm2net" id="vm2net" data-role="slider" data-mini="true" value="On">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			</div><!-- vm2net -->		
+			<div class="ui-block-b">			
+			<label for="net2edge"><img src="./img/net2edge.png" width="80" height="25"></label>
+			<select name="net2edge" id="net2edge" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			</div><!-- net2edge -->
+			<div class="ui-block-c">			
+			<label for="vapp2vm"><img src="./img/vapp2vm.png" width="80" height="25"></label>
+			<select name="vapp2vm" id="vapp2vm" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			</div><!-- vapp2vm -->
+			<div class="ui-block-d">			
+			<label id="find" for="find">Search Object: </label>
+			<input  type="search" name="find" id="find" data-mini="true"></input>
+			</div><!-- search -->
+	
+			</div><!-- grid -->			
+			<div id="visualization"></div>
+			<div id="details"></div>
+		</div><!-- global -->
+	</div> <!-- page-content -->
+
+	
+<!-- This is where we create the sliding panel with the information to login into an Org -->	
+	<div data-role="panel" data-position-to="window" data-theme="a" id="login">
+		<ul data-role="listview" data-mini="true">
+		  	<h4>Connection</h4>
+			<li data-role="fieldcontain">
+                <label for="IP">https:</label>
+                <input type="text" data-mini="true" name="IP" id="IP" value=""  />
+                <label for="Org">Org:</label>
+                <input type="text" data-mini="true" name="Org" id="Org" value=""  />
+                <label for="User">User:</label>
+                <input type="text" data-mini="true" name="User" id="User" value=""  />
+                <label for="Pass">Pass:</label>
+                <input type="password" data-mini="true" name="Pass" id="Pass" value=""  />
+                <br><br>
+			    <input data-mini="true" id="Connect" type="submit" value="Connect" />
+			</li>
+     	</ul> 
+	</div> <!-- End of sliding panel (login) -->
+
+<!-- This is the footer -->	
+	<div data-role="footer">
+	<h4>Based on the vCloud Director JS-SDK, JQueryMobile framework and VivaGraph libraries</h4>         
+	</div><!-- /footer -->
+
+</div><!-- /main -->
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+    <script type="text/javascript" src="js/jquery.base64.min.js"></script>
+    <script type="text/javascript" src="js/vcloud-js-sdk.js"></script>
+    <script type="text/javascript" src="js/vivagraph.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
